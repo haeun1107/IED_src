@@ -58,10 +58,12 @@ void loop() {
     analogWrite(PIN_LED, brightness);
   }
   else if(dist_raw < dist_min) {
+    dist_raw = dist_min;
     brightness = 255;
     analogWrite(PIN_LED, brightness);;
   }
   else if(dist_raw > dist_max) {
+    dist_raw = dist_max;
     brightness = 255;
     analogWrite(PIN_LED, brightness);
   }
